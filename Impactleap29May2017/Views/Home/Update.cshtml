@@ -1,0 +1,93 @@
+@model Impactleap29May2017.Models.Newsletter
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="block-container">
+    <section class="content-wrapper">
+        <div class="content-wrapper__inner content-wrapper__inner--thinner-sides _typography content-wrapper__text-wrapper content-wrapper__inner_auto">
+            <h3 class="text-center">Thanks for the interest</h3>
+            <p class="text-center media ourservices marginevelike">
+                We're currently updating our website. Please register your details below if you want us to contact you when
+                we are done or if you have any questions, why not get in touch?
+            </p>
+        </div>
+    </section>
+</div>
+
+<div class="block-container">
+    <section class="content-wrapper">
+
+        <div class="content-wrapper__inner content-wrapper__inner--thinner-sides">
+            <div class="cards cards--three-col cards--gray">
+                <div class="cards__item">
+                    <div class="cards__inner">
+                        <div class="cards__title">
+                            <h5>Schedule a call</h5>
+                        </div>
+                        <p class="minheight2">Speak to one of our team at a time that suits you.  They are happy to help.</p>
+                        <a href="#" class="btn btn--blackbox buttonwidth">Schedule a call</a>
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__inner">
+                        <div class="cards__title">
+                            <h5>Drop us a line</h5>
+                        </div>
+                        <p class="minheight2">Email us with your questions and someone will respond shortly.</p>
+                        <a href="#" class="btn btn--blackbox buttonwidth">Email us</a>
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__inner">
+                        <div class="cards__title">
+                            <h5>Request free report</h5>
+                        </div>
+                        <p class="minheight2">Or get started now on your free analysis report</p>
+                        <a href="#" class="btn btn--blackbox buttonwidth">Get started free</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+
+
+<section class="cta-block _clearfix">
+    <h3 class="cta-block__title">Register your details</h3>
+    <form asp-action="Update" class="signup-form">
+        <div asp-validation-summary="ModelOnly" class="signup-form__error signup-form__error--no-min-height"></div>
+        <div class="signup-form__items-wrapper">
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Name" id="signupInputUser" class="signup-form__input" placeholder="Your name" />
+                </div>
+                <span asp-validation-for="Name" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Email" id="signupInputEnvelope" class="signup-form__input" placeholder="Email" />
+                </div>
+                <span asp-validation-for="Email" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Company" id="signupInputCompany" class="signup-form__input" placeholder="Company" />
+                </div>
+                <span asp-validation-for="Company" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item signup-form__item--submit">
+                <input id="subscribe" type="submit" class="btn btn--primary btn--xl btn--fluid">
+                &nbsp;&nbsp;&nbsp;
+                <span class="alert-success">@ViewBag.SuccessMessage</span>
+            </div>
+        </div>
+    </form>
+    <p class="cta-block__title"><small>Subscribe to our newsletter to receive updates on the impact investment sector</small></p>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

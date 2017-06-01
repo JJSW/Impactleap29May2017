@@ -1,0 +1,8 @@
+C:\Users\Jonathan\Documents\Visual Studio 2017\Projects\Impactleap29May2017\Impactleap29May2017\bin\MCD\Debug\netcoreapp1.1\Impactleap29May2017.deps.json
+C:\Users\Jonathan\Documents\Visual Studio 2017\Projects\Impactleap29May2017\Impactleap29May2017\bin\MCD\Debug\netcoreapp1.1\Impactleap29May2017.runtimeconfig.json
+C:\Users\Jonathan\Documents\Visual Studio 2017\Projects\Impactleap29May2017\Impactleap29May2017\bin\MCD\Debug\netcoreapp1.1\Impactleap29May2017.runtimeconfig.dev.json
+C:\Users\Jonathan\Documents\Visual Studio 2017\Projects\Impactleap29May2017\Impactleap29May2017\bin\MCD\Debug\netcoreapp1.1\Impactleap29May2017.dll
+C:\Users\Jonathan\Documents\Visual Studio 2017\Projects\Impactleap29May2017\Impactleap29May2017\bin\MCD\Debug\netcoreapp1.1\Impactleap29May2017.pdb
+C:\Users\Jonathan\Documents\Visual Studio 2017\Projects\Impactleap29May2017\Impactleap29May2017\obj\MCD\Debug\netcoreapp1.1\Impactleap29May2017.AssemblyInfo.cs
+C:\Users\Jonathan\Documents\Visual Studio 2017\Projects\Impactleap29May2017\Impactleap29May2017\obj\MCD\Debug\netcoreapp1.1\Impactleap29May2017.dll
+C:\Users\Jonathan\Documents\Visual Studio 2017\Projects\Impactleap29May2017\Impactleap29May2017\obj\MCD\Debug\netcoreapp1.1\Impactleap29May2017.pdb

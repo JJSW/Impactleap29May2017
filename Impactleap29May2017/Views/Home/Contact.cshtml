@@ -1,0 +1,154 @@
+﻿@model Impactleap29May2017.Models.FreeReport
+
+@{
+    ViewData["Title"] = "Contact Us";
+}
+
+<div class="block-container">
+    <section class="content-wrapper">
+        <div class="content-wrapper__inner content-wrapper__inner--thinner-sides _typography ">
+            <h3 class="text-center">Get in contact</h3>
+            <div class="heading--underscore"></div>
+            <p class="text-center">
+                We want to hear from you.  Drop us an email, schedule a call or come to our offices.
+            </p>
+        </div>
+
+        <div class="content-wrapper__inner content-wrapper__inner--thinner-sides">
+            <div class="cards cards--three-col cards--gray">
+                <div class="cards__item">
+                    <div class="cards__inner">
+                        <div class="cards__image img4" style="background-image: url('/img/pictures/london.jpg');">
+
+                        </div>
+                        <div class="cards__title">
+                            <h5>London Office</h5>
+                        </div>
+                        <div class="heading--underscore"></div>
+                        <p>
+                            34B York Way, Kings Cross,</br>London N1 9AB, UK
+                        </p></br>
+                        <a href="#"><strong>Get directions</strong></a>
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__inner">
+                        <div class="cards__image img4" style="background-image: url('/img/pictures/nyc.jpg');">
+                        </div>
+                        <div class="cards__title">
+                            <h5>New York Office</h5>
+                            <div class="heading--underscore"></div>
+                        </div>
+                        <p>
+                            394 Broadway, New York, </br>NY 10013, USA
+                        </p></br>
+                        <a href="#"><strong>Get directions</strong></a>
+                    </div>
+                </div>
+                <div class="cards__item">
+                    <div class="cards__inner">
+                        <div class="cards__image img4" style="background-image: url('/img/pictures/vancouver.jpg');">
+                        </div>
+                        <div class="cards__title">
+                            <h5>Vancouver Office</h5>
+                            <div class="heading--underscore"></div>
+                        </div>
+                        <p>
+                            422 Richards Street, Vancouver,</br>BC V6B 2Z4, Canada
+                        </p></br>
+                        <a href="#"><strong>Get directions</strong></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </section>
+</div>
+
+<div class="block-container block-container--green-theme">
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner _typography text-center">
+            <h3>Speak to someone</h3>
+            <!-- <div class="heading--underscore"></div> -->
+            <a asp-controller="Home" asp-action="Update" class="btn btn--green btn--xl btn--schedule">Schedule a call</a>
+            <p class="_margin-half"><small>Speak to one of our team, at a convenient time for you</small></p>
+        </div>
+    </div>
+</div>
+
+<div class="block-container">
+    <section class="contact-intro contact-intro--equal contact-intro--mobile-center">
+        <div class="contact-intro__figure-wrapper">
+            <img class="contact-intro__figure" src="~/img/pictures/contact.jpg" width="20" height="">
+        </div>
+        <div class="contact-intro__content-wrapper">
+            <article class="content-wrapper">
+                <div class="content-wrapper__inner _typography">
+                    <h5 class="_margin-bottom-0">Other information</h5><br>
+                    <div class="heading--underscore4"></div>
+                    <div class="company-contacts">
+                        <div class="company-contacts__column">
+                            <div class="company-contacts__separator _hidden-tablet _hidden-desktop"></div>
+                            <div class="company-contacts__row">
+                                <strong>Company Details</strong></br>
+                                Registered number: 06961259</br>
+                                VAT number: GB 266 775 554</br></br>
+                            </div>
+                            <div class="company-contacts__row">
+                                <div class="company-contacts__separator _hidden-tablet _hidden-desktop"></div>
+                                <div class="company-contacts__row">
+                                    General enquiries:</br>
+                                    <a href="mailto:info@impactleap.com">info@impactleap.com</a>
+                                    </br></br>
+                                </div>
+                                <div class="company-contacts__row">
+                                    Media contact:</br>
+                                    <a href="mailto:media@impactleap.com">media@impactleap.com</a>
+                                    </br></br>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+
+<section class="cta-block _clearfix">
+    <h3 class="cta-block__title">Subscribe to our newsletter</h3>
+    <form asp-action="Contact" class="signup-form">
+        <div asp-validation-summary="ModelOnly" class="signup-form__error signup-form__error--no-min-height"></div>
+        <div class="signup-form__items-wrapper">
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Name" id="signupInputUser" class="signup-form__input" placeholder="Your name" />
+                </div>
+                <span asp-validation-for="Name" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Email" id="signupInputEnvelope" class="signup-form__input" placeholder="Email" />
+                </div>
+                <span asp-validation-for="Email" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Company" id="signupInputCompany" class="signup-form__input" placeholder="Company" />
+                </div>
+                <span asp-validation-for="Company" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item signup-form__item--submit">
+                <input id="subscribe" type="submit" class="btn btn--primary btn--xl btn--fluid">
+                &nbsp;&nbsp;&nbsp;
+                <span class="alert-success">@ViewBag.SuccessMessage</span>
+            </div>
+        </div>
+    </form>
+    <p class="cta-block__title"><small>Subscribe to our newsletter to receive updates on the impact investment sector</small></p>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

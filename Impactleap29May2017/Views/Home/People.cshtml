@@ -1,0 +1,115 @@
+@model Impactleap29May2017.Models.Newsletter
+
+@{
+    ViewData["Title"] = "Our People";
+}
+
+<div class="block-container">
+    <section class="content-wrapper">
+        <div class="content-wrapper__inner content-wrapper__inner--thinner-sides _typography content-wrapper__text-wrapper content-wrapper__inner_auto">
+            <h3 class="text-center">Our People</h3>
+            <div class="heading--underscore"></div>
+            <p class="text-center media ourservices marginevelike">
+                Diversity of thought, skills and experience is central to who we are.
+                Our team is made up of sustainability leaders, corporate financiers, business analysts,
+                economists, sector experts, data scientists and engineers from around the world.
+            </p>
+        </div>
+    </section>
+</div>
+
+
+
+<div class="block-container">
+    <section class="people-intro">
+        <div class="people-intro__content-wrapper people-intro__content-wrapper--expand">
+            <article class="content-wrapper bg-gray">
+                <div class="people-intro__figure-wrapper people-intro__figure-wrapper--expand-right _hidden-tablet _hidden-desktop">
+                    <img class="people-intro__figure" img src="~/img/pictures/people_1.jpg" width="720" height="480">
+                </div>
+                <div class="content-wrapper__inner _typography _margin-top-32">
+                    <h5>Our culture and principles</h5>
+                    <div class="heading--underscore3"></div>
+                    <p>
+                        Our success is the result of our culture.  We have a passion for sustainability and problem-solving.
+                        We aim to create an idea meritocracy in which mastery, autonomy and purpose is pursued through a
+                        collaborative entrepreneurial environment.  We believe that agile learning will lead to efficiency
+                        and innovation and we require people to be open and honest, share experiences and challenge each other&rsquo;s ideas.
+                    </p><p>
+                        Exceptional outcomes require ambitious goals, and we use a set of principles to help achieve them.
+                        These principles are an evolving record of our experiences.  They&rsquo;re not just read and followed, but
+                        stress-tested on an individual and collective level as our understanding evolves.
+                    </p>
+                    <p><a asp-controller="Home" asp-action="Update">Read more</a></p>
+                </div>
+            </article>
+        </div>
+        <div class="people-intro__figure-wrapper _hidden-mobile img3" style="background-image: url('/img/pictures/people_1.jpg');">
+            <!-- <img class="people-intro__figure" img src="img/pictures/people_1.jpg" width="720" height="480"> -->
+        </div>
+    </section>
+</div>
+
+<div class="block-container">
+    <section class="people-intro">
+        <div class="people-intro__figure-wrapper _hidden-mobile img3" style="background-image: url('/img/pictures/people_2.jpg');">
+            <!-- <img class="people-intro__figure" img src="img/pictures/people_2.jpg" width="720" height="480"> -->
+        </div>
+        <div class="people-intro__content-wrapper people-intro__content-wrapper--expand2">
+            <article class="content-wrapper">
+                <div class="people-intro__figure-wrapper people-intro__figure-wrapper--expand-right _hidden-tablet _hidden-desktop">
+                    <img class="people-intro__figure" img src="~/img/pictures/people_2.jpg" width="720" height="480">
+                </div>
+                <div class="content-wrapper__inner _typography _margin-top-32">
+                    <h5>Careers</h5>
+                    <div class="heading--underscore3"></div>
+                    </p>
+                    It takes all types to make Impactleap great.  Our network consists of full-time professionals and
+                    freelance consultants.  If you&rsquo;re passionate people sustainability, enjoy putting innovative ideas
+                    into action to tackle ambitious goals, get energy from receiving honest and constructive feedback,
+                    and likes asking and being asked &quot;why?&quot; then we should talk.  We don&rsquo;t just look for people who
+                    can do a particular job.  We look for people who want to change the world with us.
+                    </p>
+                    <p><a asp-controller="Home" asp-action="Contact">Get in contact</a></p>
+                </div>
+            </article>
+        </div>
+    </section>
+</div>
+
+<section class="cta-block _clearfix">
+    <h3 class="cta-block__title">Subscribe to our newsletter</h3>
+    <form asp-action="People" class="signup-form">
+        <div asp-validation-summary="ModelOnly" class="signup-form__error signup-form__error--no-min-height"></div>
+        <div class="signup-form__items-wrapper">
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Name" id="signupInputUser" class="signup-form__input" placeholder="Your name" />
+                </div>
+                <span asp-validation-for="Name" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Email" id="signupInputEnvelope" class="signup-form__input" placeholder="Email" />
+                </div>
+                <span asp-validation-for="Email" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Company" id="signupInputCompany" class="signup-form__input" placeholder="Company" />
+                </div>
+                <span asp-validation-for="Company" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item signup-form__item--submit">
+                <input id="subscribe" type="submit" class="btn btn--primary btn--xl btn--fluid">
+                &nbsp;&nbsp;&nbsp;
+                <span class="alert-success">@ViewBag.SuccessMessage</span>
+            </div>
+        </div>
+    </form>
+    <p class="cta-block__title"><small>Subscribe to our newsletter to receive updates on the impact investment sector</small></p>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

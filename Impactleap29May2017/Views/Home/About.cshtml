@@ -1,0 +1,159 @@
+﻿@model Impactleap29May2017.Models.FreeReport
+
+@{
+    ViewData["Title"] = "About Us";
+}
+
+<div class="block-container">
+    <section class="content-wrapper">
+        <div class="content-wrapper__inner content-wrapper__inner--thinner-sides _typography content-wrapper__text-wrapper content-wrapper__inner_auto">
+            <h3 class="text-center">About Impactleap</h3>
+            <div class="heading--underscore"></div>
+            <p class="text-center media ourservices">
+                We want to help investors make better money by connecting innovative capital with impact and technology.
+            </p>
+        </div>
+    </section>
+</div>
+
+<div class="block-container">
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner _typography ">
+            <div class="columned-wrapper">
+                <div class="columned-wrapper__column">
+                    <h5>Our philosophy </h5>
+                    <div class="heading--underscore3"></div>
+                    <p>
+                        Our philosophy is that the world can be understood, and so we strive to build systems
+                        that help us understand the interplay between our society, environment and markets.  We
+                        develop models to analyse our evolving landscape and help create value alongside positive
+                        externalities.
+                    </p><p>
+                        Innovation and technology are crucial to advancing our mission. Creating excellent outcomes
+                        requires unorthodox thinking and applying our understanding of how the world works to ambitious
+                        goals.  Our technologists collaborate with our analysts to design, engineer, and run
+                        applications that enable accurate analysis and interpretation of impact data.
+                    </p>
+                </div>
+                <div class="columned-wrapper__column _hidden-mobile _hidden-tablet">
+                    <div class="image-block">
+                        <img class="image-block__image image-block__image--full-width" img src="~/img/pictures/about_1.jpg" width="720" height="480">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="block-container">
+    <section class="content-wrapper bg-dark-blue">
+        <div class="content-wrapper__inner">
+            <section class="local-users-nr">
+                <div class="local-users-nr__inner colorwhite nomargins">
+                    <h3 class="local-users-nr__title nomarginslr">
+                        Our vision
+                    </h3>
+                    <p class="nomarginslr">
+                        To fundamentally change the wealth management industry by integrating
+                        innovation, technology and sustainability into the investment cycle.
+                    </p>
+                </div>
+            </section>
+        </div>
+    </section>
+</div>
+
+<div class="block-container">
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner _typography ">
+            <div class="columned-wrapper">
+                <div class="columned-wrapper__column _hidden-mobile _hidden-tablet">
+                    <div class="image-block">
+                        <img class="image-block__image image-block__image--full-width" img src="~/img/pictures/about_2.jpg" width="" height="">
+                    </div>
+                </div>
+                <div class="columned-wrapper__column">
+                    <h5>Why we do this?</h5>
+                    <div class="heading--underscore3"></div>
+                    <p>
+                        Long-term demographic trends, environmental challenges and resource constraints, combined with
+                        our current economic systems, are undermining societal and planetary well-being. Financial
+                        systems are misallocating capital because they undervalue the risks that we face, neglect the
+                        impact of externalities, and fail to recognise long-term opportunities.  We believe that
+                        proactive and thoughtful investment strategies will help shape a more sustainable
+                        future and lead to outperformance.
+                    </p>
+                    <a href="#">Read more</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="gray-divider"></div>
+
+<div class="block-container">
+    <div class="content-wrapper">
+        <div class="content-wrapper__inner _typography ">
+            <div class="columned-wrapper">
+                <div class="columned-wrapper__column">
+                    <h5>Our impact</h5>
+                    <div class="heading--underscore3"></div>
+                    <p>
+                        We measure the impact of our services and their role in the allocation of capital
+                        towards investment opportunities which generate both financial return and positive
+                        externalities.  We also work hard to improve our secondary impacts through our commitments
+                        to our employees, our community and our environment.  We believe in driving business and
+                        social benefits through an inclusive community investment scheme and we have implemented a
+                        number of initiatives to improve our environmental footprint.
+                    </p>
+                    <a href="#">Read more</a>
+                </div>
+                <div class="columned-wrapper__column _hidden-mobile _hidden-tablet">
+                    <div class="image-block">
+                        <img class="image-block__image image-block__image--full-width" img src="~/img/pictures/about_3.jpg" width="720" height="480">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>
+
+<section class="cta-block _clearfix">
+    <h3 class="cta-block__title">Subscribe to our newsletter</h3>
+    <form asp-action="About" class="signup-form">
+        <div asp-validation-summary="ModelOnly" class="signup-form__error signup-form__error--no-min-height"></div>
+        <div class="signup-form__items-wrapper">
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Name" id="signupInputUser" class="signup-form__input" placeholder="Your name" />
+                </div>
+                <span asp-validation-for="Name" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Email" id="signupInputEnvelope" class="signup-form__input" placeholder="Email" />
+                </div>
+                <span asp-validation-for="Email" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item">
+                <div class="signup-form__input-wrapper">
+                    <input asp-for="Company" id="signupInputCompany" class="signup-form__input" placeholder="Company" />
+                </div>
+                <span asp-validation-for="Company" class="signup-form__error"></span>
+            </div>
+            <div class="signup-form__item signup-form__item--submit">
+                <input id="subscribe" type="submit" class="btn btn--primary btn--xl btn--fluid">
+                &nbsp;&nbsp;&nbsp;
+                <span class="alert-success">@ViewBag.SuccessMessage</span>
+            </div>
+        </div>
+    </form>
+    <p class="cta-block__title"><small>Subscribe to our newsletter to receive updates on the impact investment sector</small></p>
+</section>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

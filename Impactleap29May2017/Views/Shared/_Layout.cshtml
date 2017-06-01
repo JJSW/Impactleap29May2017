@@ -1,0 +1,176 @@
+﻿@inject Microsoft.ApplicationInsights.AspNetCore.JavaScriptSnippet JavaScriptSnippet
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="description" content="Analysis &amp; reporting solutions for environmental and social impact." />
+    <meta name="keywords" content="social impact, environmental reporting, impact investing, sustainable investment, carbon reporting" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <title>@ViewData["Title"] | Impactleap</title>
+
+    <link rel="shortcut icon" href="~/img/logos/favicon.png" type="image/png">
+    <link href="~/css/style_landing_May17.css" rel="stylesheet">
+
+    @*<environment names="Development">
+        <link rel="shortcut icon" href="img/logos/favicon.png" type="image/png">
+        <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
+        <link rel="stylesheet" href="~/css/style_landing_May17.css" />
+    </environment>
+
+    <environment names="Staging,Production">
+        <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
+              asp-fallback-href="~/lib/bootstrap/dist/css/bootstrap.min.css"
+              asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute" />
+        <link rel="stylesheet" href="~/css/site.min.css" asp-append-version="true" />
+    </environment>
+
+    @Html.Raw(JavaScriptSnippet.FullScript)*@
+</head>
+
+<body>
+<div id="body">
+    <header id="header" class="header  header--alt" name="header--alt">
+        <div class="header__container">
+            <button id="hamburger" class="hamburger">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+            <div class="header__container__row">
+                <a id="header-logo" asp-controller="Home" asp-action="Index" class="header__logo">
+                        <img class="header-logo-img top" src="~/img/logos/impactleap-logo-white.png" alt="">
+                        <img class="header-logo-img bottom" src="~/img/logos/impactleap-logo-gray.png" alt="">
+                    </a>
+                    <ul class="header__navigation">
+                        <li class="header__navigation__login _hidden-mobile">
+                            <a asp-controller="FreeReports" asp-action="RequestReport" class="btn btn--link">
+                                <span id="login" class="btn__label">Login</span>
+                            </a>
+                        </li>
+                        <li class="header__navigation__login _hidden-desktop _hidden-tablet">
+                            <a asp-controller="FreeReports" asp-action="RequestReport">
+                                    <svg class="fa-lock" width="25" height="25" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M640 768h512v-192q0-106-75-181t-181-75-181 75-75 181v192zm832 96v576q0 40-28 68t-68 28h-960q-40 0-68-28t-28-68v-576q0-40 28-68t68-28h32v-192q0-184 132-316t316-132 316 132 132 316v192h32q40 0 68 28t28 68z" /></svg>
+                                </a>
+                        </li>
+                        <li class="header__navigation__signup">
+                            <a id="register" asp-controller="FreeReports" asp-action="RequestReport" class="btn btn--register--style1">
+                                Register free
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="menu-navigation">
+                <img id="X" src="~/img/graphics/X2.png" />
+                <ul class="menu-navigation__container">
+                    <li class="menu-item">
+                        <a asp-controller="Home" asp-action="Index" class="menu-navigation__logo">
+                            <img class="header-logo-img2 top" src="~/img/logos/impactleap-logo-white.png" alt="">
+                            <img class="header-logo-img2 bottom" src="~/img/logos/impactleap-logo-gray.png" alt="">
+                        </a>
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="" asp-controller="Home" asp-action="OnDemand" class="menu-item__link">On-Demand</a>
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Advisory" class="menu-item__link">Advisory</a>
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Clients" class="menu-item__link">Clients</a>
+                     
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Pricing" class="menu-item__link">Pricing</a> 
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="" asp-controller="Home" asp-action="People" class="menu-item__link">People</a>
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="" asp-controller="Home" asp-action="About" class="menu-item__link">About</a>
+                    </li>
+                    <li class="menu-item">
+                        <a asp-area="" asp-controller="Home" asp-action="Contact" class="menu-item__link">Contact</a>
+                    </li>
+                    <li class="menu-item--signup">
+                        <a asp-area="" asp-controller="FreeReports" asp-action="RequestReport" 
+                           class="btn btn--sidemenu btn--alt">Get free report</a>
+                    </li>
+                    <li class="menu__language-picker">
+                        <div class="language-picker">
+                            <div class="language-picker__select-box" name="language-picker">
+                                English
+                                <svg class="fa-chevron-down" width="19" height="19" viewBox="0 0 1792 1792" xmlns="http://www.w3.org/2000/svg"><path d="M1683 808l-742 741q-19 19-45 19t-45-19l-742-741q-19-19-19-45.5t19-45.5l166-165q19-19 45-19t45 19l531 531 531-531q19-19 45-19t45 19l166 165q19 19 19 45.5t-19 45.5z" /></svg>
+                            </div>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+            <div class="overlay">d</div>
+
+    </header>
+
+    <div class="header-spacer "></div>
+
+    @RenderBody()
+
+    <footer class="footer">
+        <div class="block-container">
+            <div class="footer__inner">
+                <div class="footer__bottom">
+                    <ul class="footer__bottom__links">
+                        <li class="text small">© 2017 Impactleap</li>
+                        <li class="small">
+                            <a href="#" rel="nofollow">Terms of Service</a>
+                        </li>
+                        <li class="small">
+                            <a href="#" rel="nofollow">Privacy Policy</a>
+                        </li>
+                    </ul>
+                    <div class="footer__bottom__what-it-does">
+                        <p>
+                            <small>Impactleap provides impact analysis solutions.</small>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+</div>
+
+<!-- js scripts -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script src="~/js/header.js"></script>
+<script src="~/js/modal.js"></script>
+
+
+    @*<environment names="Development">
+        <script src="~/lib/jquery/dist/jquery.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+    </environment>
+    <environment names="Staging,Production">
+        <script src="https://ajax.aspnetcdn.com/ajax/jquery/jquery-2.2.0.min.js"
+                asp-fallback-src="~/lib/jquery/dist/jquery.min.js"
+                asp-fallback-test="window.jQuery"
+                crossorigin="anonymous"
+                integrity="sha384-K+ctZQ+LL8q6tP7I94W+qzQsfRV2a+AfHIi9k8z8l9ggpc8X+Ytst4yBo/hH+8Fk">
+        </script>
+        <script src="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/bootstrap.min.js"
+                asp-fallback-src="~/lib/bootstrap/dist/js/bootstrap.min.js"
+                asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
+                crossorigin="anonymous"
+                integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa">
+        </script>
+        <script src="~/js/site.min.js" asp-append-version="true"></script>
+    </environment>*@
+
+    @RenderSection("Scripts", required: false)
+
+</body>
+
+</html>
+
