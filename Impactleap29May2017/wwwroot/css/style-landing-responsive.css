@@ -399,7 +399,7 @@ body, #body{
 	.btn--resize{display:inline!important;padding-left:100px!important;padding-right:100px!important;}
 }
 @media (max-width:450px){
-	.btn--resize{padding-left:60px!important;padding-right:60px!important;}
+	.btn--resize{padding-left:30px!important;padding-right:30px!important;}
 }
 
 @media (max-width:400px){
