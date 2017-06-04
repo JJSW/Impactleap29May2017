@@ -12,6 +12,7 @@
     <Content Include="wwwroot\css\style-landing-bespoke.css" />
     <Content Include="wwwroot\css\style-landing-responsive.css" />
     <Content Include="wwwroot\css\style_landing_May17.css" />
+    <Content Include="wwwroot\js\pricing_tabs.js" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
