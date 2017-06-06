@@ -856,17 +856,17 @@ button:disabled,input[type=submit]:disabled{
 	min-width:0
 }
 
-#signupInputUser {
+#Name {
 	background-image: url('../img/graphics/User.svg');
 	background-position: 7px 13px;
 }
 
-#signupInputEnvelope {
+#Email {
 	background-image: url('../img/graphics/EnvelopeO.svg');
 	background-position: 7px 15px;
 }
 
-#signupInputCompany {
+#Company {
 	background-image: url('../img/graphics/Company.svg');
 	background-position: 7px 11px;
 }
@@ -920,6 +920,7 @@ button:disabled,input[type=submit]:disabled{
 	margin-bottom:10px;
 	margin-top:5px
 }
+
 
 .signup-form__error--no-min-height{
 	min-height:0;

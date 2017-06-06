@@ -34,7 +34,7 @@ namespace Impactleap29May2017.Controllers
             return View();
         }
 
-        public ActionResult Clients()
+        public IActionResult Clients()
         {
             return View();
         }
@@ -53,9 +53,11 @@ namespace Impactleap29May2017.Controllers
                     newsletter.SignUpDate = DateTime.Today;
                     _context.Add(newsletter);
                     await _context.SaveChangesAsync();
+
                     ViewBag.SuccessMessage = "Your details have been registered successfully!";
                     ModelState.Clear();
                     return View();
+
                 }
             }
             catch (DbUpdateException /* ex */)
@@ -66,7 +68,7 @@ namespace Impactleap29May2017.Controllers
                     "see your system administrator.");
             }
 
-            return View();
+            return View(newsletter);
 
         }
 

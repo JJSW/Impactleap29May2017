@@ -128,31 +128,72 @@
         <div class="signup-form__items-wrapper">
             <div class="signup-form__item">
                 <div class="signup-form__input-wrapper">
-                    <input asp-for="Name" id="signupInputUser" class="signup-form__input" placeholder="Your name" />
+                    <input asp-for="Name"
+                           class="signup-form__input"
+                           placeholder="Your name" />
                 </div>
-                <span asp-validation-for="Name" class="signup-form__error"></span>
+                <span asp-validation-for="Name" class="text-danger" style="font-size:12px;text-align:left;color:#FF0000;"></span>
             </div>
             <div class="signup-form__item">
                 <div class="signup-form__input-wrapper">
-                    <input asp-for="Email" id="signupInputEnvelope" class="signup-form__input" placeholder="Email" />
+                    <input asp-for="Email"
+                           class="signup-form__input"
+                           placeholder="Email" />
+
                 </div>
-                <span asp-validation-for="Email" class="signup-form__error"></span>
+                <span asp-validation-for="Email" class="text-danger" style="font-size:12px;text-align:left;color:#FF0000;"></span>
             </div>
             <div class="signup-form__item">
                 <div class="signup-form__input-wrapper">
-                    <input asp-for="Company" id="signupInputCompany" class="signup-form__input" placeholder="Company" />
+                    <input asp-for="Company"
+                           class="signup-form__input"
+                           placeholder="Company" />
                 </div>
-                <span asp-validation-for="Company" class="signup-form__error"></span>
+                <span asp-validation-for="Company" class="text-danger" style="font-size:12px;text-align:left;color:#FF0000;"></span>
             </div>
             <div class="signup-form__item signup-form__item--submit">
-                <input id="subscribe" type="submit" class="btn btn--primary btn--xl btn--fluid">
-                &nbsp;&nbsp;&nbsp;
-                <span class="alert-success">@ViewBag.SuccessMessage</span>
+                <button type="submit" class="btn btn--primary btn--xl btn--fluid">
+                    Subscribe
+                </button>
+                <a id="subscribe" class="btn btn--blackbox btn--xl" style="visibility:hidden;">Thank you</a>
+                @if (ViewBag.SuccessMessage != null)
+            {
+                    <script>
+                        $(document).ready(function () {
+                            $('#subscribe').click();
+                        });
+                    </script>
+                }
+                <div class="signup-form__error signup-form__error--no-min-height"></div>
             </div>
+
         </div>
     </form>
     <p class="cta-block__title"><small>Subscribe to our newsletter to receive updates on the impact investment sector</small></p>
 </section>
+
+
+<!-- modal thank you -->
+<div id="modal-thank-you-for-subscribing" class="modal-block">
+    <div class="modal-block__overlay">
+        <div class="modal-block__overlay-item">
+            <div class="modal-block__spacer">
+                <section class="modal-content">
+                    <a href="#close" class="modal-block__close">
+                        <i class="fa fa-times">X</i>
+                    </a>
+                    <div class="modal-content__inner">
+                        <div class="thanks-for-subscribing">
+                            <img class="thanks-for-subscribing__image" src="~/img/graphics/icon-envelope.svg">
+                            <h3 class="modal-content__heading thanks-for-subscribing__title">Thank you for subscribing!</h3>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- modal thank you -->
 
 @section Scripts {
     @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
