@@ -33,6 +33,12 @@
 </head>
 
 <body>
+
+    <!-- js scripts -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="~/js/header.js"></script>
+    <script src="~/js/modal.js"></script>
+
     <div id="body">
         <header id="header" class="header  header--alt headerfixed" name="header--alt">
 
@@ -135,36 +141,42 @@
                                         <div class="signup-form__item">
                                             <div class="signup-form__input-wrapper">
                                                 <input asp-for="Name" 
-                                                       id="signupInputUser"
                                                        class="signup-form__input"
                                                        placeholder="Enter name" />
                                             </div>
                                         </div>
-                                        <span asp-validation-for="Name" class="signup-form__error"></span>
+                                        <span asp-validation-for="Name" class="text-danger" style="font-size:12px;text-align:left;color:#FF0000;min-height:1.5em;margin-bottom:10px;margin-top:5px;"></span>
                                         <div class="signup-form__item">
                                             <div class="signup-form__input-wrapper">
                                                 <input asp-for="Email"
-                                                       id="signupInputEnvelope"
                                                        class="signup-form__input"
                                                        placeholder="Your email" />
                                             </div>
                                         </div>
-                                        <span asp-validation-for="Email" class="signup-form__error"></span>
+                                        <span asp-validation-for="Email" class="text-danger" style="font-size:12px;text-align:left;color:#FF0000;min-height:1.5em;margin-bottom:10px;margin-top:5px;"></span>
                                         <div class="signup-form__item">
                                             <div class="signup-form__input-wrapper">
                                                 <input asp-for="Company"
-                                                       id="signupInputCompany"
                                                        class="signup-form__input"
                                                        placeholder="Company (if applicable)" />
                                             </div>
                                         </div>
-                                        <span asp-validation-for="Company" class="signup-form__error"></span>
+                                        <span asp-validation-for="Company" class="text-danger" style="font-size:12px;text-align:left;color:#FF0000;min-height:1.5em;margin-bottom:10px;margin-top:5px;"></span>
                                         <div class="signup-form__item">
                                             <div class="signup-form__button">
                                                 <button type="submit" class="btn btn--primary btn--xl btn--fluid">
                                                     Request report
                                                 </button>
                                             </div>
+                                            <a id="subscribe" class="btn btn--blackbox btn--xl" style="visibility:hidden;">Thank you</a>
+                                            @if (ViewBag.SuccessMessage != null)
+                                             {
+                                                <script>
+                                                    $(document).ready(function () {
+                                                        $('#subscribe').click();
+                                                    });
+                                                </script>
+                                            }
                                             <div class="signup-form__error signup-form__error--no-min-height"></div>
                                         </div>
                                     </div>
@@ -177,11 +189,31 @@
             </div>
         </div>
 
+        <!-- modal thank you -->
+        <div id="modal-thank-you-for-subscribing" class="modal-block">
+            <div class="modal-block__overlay">
+                <div class="modal-block__overlay-item">
+                    <div class="modal-block__spacer">
+                        <section class="modal-content">
+                            <a href="#close" class="modal-block__close">
+                                <i class="fa fa-times">X</i>
+                            </a>
+                            <div class="modal-content__inner">
+                                <div class="thanks-for-subscribing">
+                                    <img class="thanks-for-subscribing__image" src="~/img/graphics/icon-envelope.svg">
+                                    <h3 class="modal-content__heading thanks-for-subscribing__title">Thank you.  Someone will be in contact shortly.</h3>
+                                </div>
+                            </div>
+                        </section>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- modal thank you -->
 
         @section Scripts {
             @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
         }
-
         <footer class="footer bg-dark-gray">
             <div class="block-container">
                 <div class="footer__inner">
@@ -209,10 +241,7 @@
 
     </div>
 
-    <!-- js scripts -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="~/js/header.js"></script>
-    <script src="~/js/modal.js"></script>
+
 
 </body>
 </html>
